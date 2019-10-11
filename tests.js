@@ -46,3 +46,42 @@ describe("sayHello", function() {
         expect(sayHello(2.3)).toBe("Hello, World!");
     });
 });
+
+describe("isFive", function () {
+    it("should be a defined function", function () {
+        expect(typeof isFive).toBe("function");
+    });
+    it("should return a boolean when called", function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it("should return a true when 5 is passed", function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it("should return a true when '5' is passed", function () {
+        expect(isFive("5")).toBe(true);
+    });
+});
+
+describe("isEven", function (){
+    it("should be a defined function", function () {
+        expect(typeof isEven).toBe("function");
+    });
+    it("should return a boolean when called", function () {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it("should return a true when 2 is passed", function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it("should return a true when -4 is passed", function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it("should return a false when 3 is passed", function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it("should return a false when 'banana is passed", function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it("should return a false when infinity is passed", function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+});
