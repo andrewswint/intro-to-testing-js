@@ -45,6 +45,9 @@ describe("sayHello", function() {
     it("should return 'Hello, World!'",function () {
         expect(sayHello(2.3)).toBe("Hello, World!");
     });
+    it("should return 'Hello World when passed a number string", function () {
+        expect(sayHello("5")).toBe("Hello, World!")
+    })
 });
 
 describe("isFive", function () {
